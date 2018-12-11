@@ -9,5 +9,3 @@ function pigLatin(string) {
         return string.substring(index) + string.substring(0, index) + "ay";
     }
 }
-
-console.log(pigLatin("spaghetti"));
