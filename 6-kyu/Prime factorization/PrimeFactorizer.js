@@ -1,13 +1,15 @@
 function PrimeFactorizer(n) {
 
-    let getFactor = function () {
+    this.factor = getFactor(n);
+
+    function getFactor(n) {
         let res = {};
         for (let i = 2; i <= Math.sqrt(n); i++) {
             while (n % i === 0) {
                 if (!res.hasOwnProperty(i)) {
                     res[i] = 0;
                 }
-                res[i] = res[i] + 1;
+                res[i]++;
                 n /= i;
             }
         }
@@ -16,13 +18,10 @@ function PrimeFactorizer(n) {
             if (!res.hasOwnProperty(n)) {
                 res[n] = 0;
             }
-            res[n] = res[n] + 1;
+            res[n]++;
         }
+
         return res;
-
-    };
-
-    this.factor = getFactor();
-
+    }
 }
 
