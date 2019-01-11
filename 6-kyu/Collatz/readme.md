@@ -18,7 +18,7 @@ Create a function `collatz` that returns a collatz sequence string starting with
 Where Xi is each iteration of the sequence and N is the length of the sequence.
 
 **Sample Input**  
-```java
+```javascript
 collatz(4); // should return "4->2->1"
 collatz(3); // should return "3->10->5->16->8->4->2->1"
 ```
